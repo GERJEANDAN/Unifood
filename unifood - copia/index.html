@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniFood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="splash-screen" class="screen visible">
+        <h1>UniFood</h1>
+        <p>Alimentación rápida, saludable y personalizada</p>
+    </div>
+
+    <div id="register-screen" class="screen hidden">
+        <h2>Registro/Iniciar Sesión</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <div id="menu-screen" class="screen hidden">
+        <h2>Menú Principal</h2>
+        <button onclick="mostrarBusqueda()">Buscar Comida</button>
+        <button onclick="mostrarPerfil()">Perfil</button>
+        <button onclick="mostrarHistorial()">Historial</button>
+        <button onclick="mostrarCarrito()">Carrito</button>
+        <button onclick="mostrarConsulta()">Consulta Nutricionista</button>
+    </div>
+
+    <div id="search-screen" class="screen hidden">
+        <h2>Búsqueda de Comida</h2>
+        <div id="platillos"></div>
+        <button onclick="regresar()">Regresar</button>
+    </div>
+
+    <div id="profile-screen" class="screen hidden">
+        <h2>Perfil de Usuario</h2>
+        <p>Información del usuario y preferencias</p>
+        <button onclick="regresar()">Regresar</button>
+    </div>
+
+    <div id="history-screen" class="screen hidden">
+        <h2>Historial de Pedidos</h2>
+        <div id="historial"></div>
+        <button onclick="regresar()">Regresar</button>
+    </div>
+
+    <div id="cart-screen" class="screen hidden">
+        <h2>Carrito de Compras</h2>
+        <div id="carrito"></div>
+        <button onclick="realizarPago()">Pagar</button>
+        <button onclick="regresar()">Regresar</button>
+    </div>
+
+    <div id="consulta-screen" class="screen hidden">
+        <h2>Consulta con el nutricionista</h2>
+        <div id="consulta"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
